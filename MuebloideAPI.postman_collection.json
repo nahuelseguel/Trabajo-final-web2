@@ -1,0 +1,349 @@
+{
+	"info": {
+		"_postman_id": "9549185b-5cc1-48b2-a5d0-9957f6224651",
+		"name": "MuebloideAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30497774"
+	},
+	"item": [
+		{
+			"name": "articulos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/TPE-Web2-API/api/articulos?page=1&limit=10&ordenarPor=precio&buscar=roble",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"phpWeb2",
+						"TPE-Web2-API",
+						"api",
+						"articulos"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "ordenarPor",
+							"value": "precio"
+						},
+						{
+							"key": "buscar",
+							"value": "roble"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "articulos (ordenados)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "apikey",
+						"value": "123456",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/TPE-Web2-API/api/articulosOrdenados/desc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"phpWeb2",
+						"TPE-Web2-API",
+						"api",
+						"articulosOrdenados",
+						"desc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "articulos/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/TPE-Web2-API/api/articulos/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"phpWeb2",
+						"TPE-Web2-API",
+						"api",
+						"articulos",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "categorias/:tipo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/TPE-Web2-API/api/categorias/silla",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"phpWeb2",
+						"TPE-Web2-API",
+						"api",
+						"categorias",
+						"silla"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "categorias",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/TPE-Web2-API/api/categorias&ordenarPor=id_categoria&limit=100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"phpWeb2",
+						"TPE-Web2-API",
+						"api",
+						"categorias&ordenarPor=id_categoria&limit=100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "articulosEnPromo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/TPE-Web2-API/api/articulosEnPromo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"phpWeb2",
+						"TPE-Web2-API",
+						"api",
+						"articulosEnPromo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "categorias",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "APIKEY",
+						"value": "uKhVH94MJYlVRoAWQqdkvQt4lGJfttHpeojzC9hewwxCrShZiprD1rtCYzPw9OH4J2bhF++X/+lVkmQci+BLlA==",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"id_categoria\":15,\r\n   \"tipo\":\"Mesada\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/TPE-Web2-API/api/categorias",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"phpWeb2",
+						"TPE-Web2-API",
+						"api",
+						"categorias"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "articulos",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "APIKEY",
+						"value": "uKhVH94MJYlVRoAWQqdkvQt4lGJfttHpeojzC9hewwxCrShZiprD1rtCYzPw9OH4J2bhF++X/+lVkmQci+BLlA==",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_articulo\": 1,\r\n    \"nombre\": \"Prueba con exito2\",\r\n    \"alto\": 105,\r\n    \"ancho\": 55,\r\n    \"precio\": 99999,\r\n    \"profundidad\": 207,\r\n    \"id_categoria\": 1,\r\n    \"imagePath\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/TPE-Web2-API/api/articulos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"phpWeb2",
+						"TPE-Web2-API",
+						"api",
+						"articulos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "articulos",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "APIKEY",
+						"value": "uKhVH94MJYlVRoAWQqdkvQt4lGJfttHpeojzC9hewwxCrShZiprD1rtCYzPw9OH4J2bhF++X/+lVkmQci+BLlA==",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"nombre\":\"Prueba Nahue\",\r\n   \"alto\":105,\r\n   \"ancho\":55,\r\n   \"precio\":99999,\r\n   \"profundidad\":207,\r\n   \"id_categoria\":1,\r\n   \"imagePath\":\"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/TPE-Web2-API/api/articulos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"phpWeb2",
+						"TPE-Web2-API",
+						"api",
+						"articulos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "categorias",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "APIKEY",
+						"value": "uKhVH94MJYlVRoAWQqdkvQt4lGJfttHpeojzC9hewwxCrShZiprD1rtCYzPw9OH4J2bhF++X/+lVkmQci+BLlA==",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"tipo\":\"Muebles de living\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/TPE-Web2-API/api/categorias",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"phpWeb2",
+						"TPE-Web2-API",
+						"api",
+						"categorias"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crearApiKey",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "APIKEY",
+						"value": "uKhVH94MJYlVRoAWQqdkvQt4lGJfttHpeojzC9hewwxCrShZiprD1rtCYzPw9OH4J2bhF++X/+lVkmQci+BLlA==",
+						"type": "text"
+					},
+					{
+						"key": "typ",
+						"value": "JWT",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"pablodem32@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/TPE-Web2-API/api/crearApiKey",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"phpWeb2",
+						"TPE-Web2-API",
+						"api",
+						"crearApiKey"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
